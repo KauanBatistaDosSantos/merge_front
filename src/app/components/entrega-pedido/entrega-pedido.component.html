@@ -13,7 +13,6 @@
       <div class="detalhes-pedido" *ngFor="let item of pedido.itens">
         <h3 class="texto-preto" id="titulo-h3">{{ item.nomePrato }}</h3>
         <p class="texto-cinza">{{ item.descricao }}</p>
-        <p class="texto-cinza">{{ item.observacao || 'Sem observações' }}</p>
       </div>
     </div>
     <div id="botao">
