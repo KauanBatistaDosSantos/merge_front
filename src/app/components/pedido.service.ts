@@ -9,6 +9,8 @@ import { map, switchMap } from 'rxjs/operators';
 export class PedidoService {
   private apiUrl = 'http://localhost:3000/pedidos';
   private subtotal: number = 100;
+  private codigoConfirmacao: string = '';
+  private pedidoId: string = '';
 
   constructor(private http: HttpClient) {
     this.simularPedidoFicticio();
@@ -99,14 +101,26 @@ export class PedidoService {
       map(pedidos => 
         pedidos
           .filter(pedido => pedido.entregador === entregador && pedido.status === 'pedido enviado para entrega')
-          .sort((a, b) => new Date(a.horario).getTime() - new Date(b.horario).getTime()) // Ordena por data
+          .sort((a, b) => new Date(a.horario).getTime() - new Date(b.horario).getTime())
       ),
-      map(pedidosOrdenados => pedidosOrdenados.length ? pedidosOrdenados[0] : null) // Retorna o mais antigo ou null se não houver
+      map(pedidosOrdenados => pedidosOrdenados.length ? pedidosOrdenados[0] : null)
     );
   }
 
   finalizarPedido(id: number): Observable<any> {
     return this.http.patch(`${this.apiUrl}/${id}`, { status: 'pedido finalizado' });
   }
+
+  setCodigoConfirmacao(cpf: string, id: string): void {
+    this.codigoConfirmacao = cpf.replace(/\D/g, '').slice(0, 5);
+    this.pedidoId = id;
+  }
   
+  getCodigoConfirmacao(): string {
+    return this.codigoConfirmacao;
+  }
+
+  getPedidoId(): string {
+    return this.pedidoId;
+  }
 }

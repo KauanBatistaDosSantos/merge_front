@@ -15,16 +15,14 @@ import { NgIf } from '@angular/common';
 })
 export class AcompanharPedidoComponent {
   statusAtual: string = '';
-  entregaConfirmada: boolean = false;  // Controle para esconder o componente de confirmação
+  entregaConfirmada: boolean = false;
 
   constructor(private pedidoStatusService: PedidoStatusService) {}
 
   ngOnInit(): void {
-    // Assina as mudanças de status e atualiza o status atual
     this.pedidoStatusService.status$.subscribe((status) => {
       this.statusAtual = status;
 
-      // Se o status for "Pedido concluído", marca como confirmado e remove o componente
       if (status === 'Pedido concluído') {
         this.entregaConfirmada = true;
       }

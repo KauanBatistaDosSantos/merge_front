@@ -100,7 +100,8 @@ export class TelaClienteFinalizarPedidoComponent implements OnInit {
         observacao: this.observacao
       };
 
-      this.pedidoService.fazerPedido(novoPedido).subscribe(() => {
+      this.pedidoService.fazerPedido(novoPedido).subscribe(pedidoCriado => {
+        this.pedidoService.setCodigoConfirmacao(this.cpfSalvo, pedidoCriado.id);
         this.router.navigate(['/acompanhar-pedido']);
       });
     }
@@ -108,7 +109,7 @@ export class TelaClienteFinalizarPedidoComponent implements OnInit {
 
   ajustarAltura(event: Event): void {
     const textarea = event.target as HTMLTextAreaElement;
-    textarea.style.height = 'auto'; // Reseta a altura para calcular o scrollHeight
-    textarea.style.height = `${textarea.scrollHeight}px`; // Define a altura conforme o conteúdo
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
   }
 }
