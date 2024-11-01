@@ -1,0 +1,40 @@
+<section class="mulish-fonte">
+    <header>
+        <svg (click)="voltar()" class="botao-voltar" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+        
+    </header>
+
+    <main>
+        <h1>CARDÁPIO</h1>
+        <section class="menu">
+            <button class="botao-item-cardapio" (click)="irParaExecutivo()">
+                Executivos
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLaIOnxWtO__gsAA96sn6xLHtqfE7KbUGug&s" alt="icone-cardapio">
+                </div>
+            </button>
+
+            <button class="botao-item-cardapio" (click)="irParaBebidas()">
+                Bebidas
+                <div>
+                    <img src="https://confeiteiro.agilecdn.com.br/47418.png" alt="icone-cardapio">
+                </div>
+            </button>
+
+            <button class="botao-item-cardapio" (click)="irParaPorcoes()">
+                Porções
+                <div>
+                    <img src="https://cdn.awsli.com.br/600x450/951/951689/produto/41460414/d32c5c0d05.jpg" alt="icone-cardapio">
+                </div>
+            </button>
+        </section>
+        <div class="cabecalho">
+            <button (click)="irParaCarrinho()"  class="carrinho-button">
+                Carrinho 
+                
+            </button>
+        </div>
+
+    </main>
+    
+</section>

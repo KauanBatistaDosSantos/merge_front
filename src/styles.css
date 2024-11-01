@@ -1,12 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-body {
-    font-family: 'Mulish', sans-serif;
-    background-color: var(--fundo-telas);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Define altura total e remove a margem do body */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+/* Variáveis de cor */
 :root {
     --fundo: #1F2027;
+    --fundo-telas: #1D2126; /* Variável unificada para o fundo */
     --vermelho-figma: #D32E2E;
     --branco-figma: #fff;
     --amarelo-figma: #E8BB2D;
@@ -19,14 +27,10 @@ body {
     --verde-entregador-disponivel: #00FF1E;
     --cinza-texto-fundo: #474F5A;
     --cinza-botao-inativo: #818D9F;
-    --fundo-telas: #25262D;
     --pedido-nao-aceito: #455A64;
 }
 
-html, body { height: 100%; }
-body { margin: 0; }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Configurações de estilo para o body */
+body {
+    background-color: var(--fundo-telas);
+}
