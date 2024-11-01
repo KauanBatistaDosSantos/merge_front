@@ -4,11 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogConfirmarFinalizacaoDoPedidoComponent } from '../dialog-confirmar-finalizacao-do-pedido/dialog-confirmar-finalizacao-do-pedido.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-cozinha-pedido',
   standalone: true,
-  imports: [HttpClientModule, CommonModule],
+  imports: [HttpClientModule, CommonModule, MatTooltipModule],
   templateUrl: './cozinha-pedido.component.html',
   styleUrl: './cozinha-pedido.component.css'
 })

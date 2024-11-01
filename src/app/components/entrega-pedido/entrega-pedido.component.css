@@ -75,6 +75,10 @@
     font-optical-sizing: auto;
     font-weight: 700;
     background-color: var(--verde-figma);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80px;
 }
 
 .texto-preto {

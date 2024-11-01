@@ -212,7 +212,7 @@
       "observacao": "sem batatinha",
       "numeroPedido": 10,
       "horario": "2024-10-26T22:30:59.298Z",
-      "status": "pedido finalizado",
+      "status": "em preparo",
       "tempo": "0 min",
       "entregador": "Hugo Prado"
     },
@@ -387,6 +387,20 @@
       "tempo": "0 min",
       "entregador": "Hugo Prado",
       "tempoEstimado": 15
+    },
+    {
+      "id": "23",
+      "nomeCliente": "Gustavo Marinho",
+      "itens": [],
+      "preco": 115,
+      "endereco": "Rua Rainha Maria Stuart, 168 - Vila Regina",
+      "cpf": "490.883.748-13",
+      "observacao": "",
+      "numeroPedido": 23,
+      "horario": "2024-11-01T18:42:15.251Z",
+      "status": "aguardando entrega",
+      "tempo": "4 min",
+      "entregador": ""
     }
   ],
   "entregadores": [

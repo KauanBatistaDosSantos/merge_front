@@ -2,7 +2,9 @@
     <div class="info-pedido-pai">
       <div class="info-pedido">
         <div class="texto-branco">{{ pedido.tempo || 'Tempo indefinido' }}</div>
-        <div class="texto-branco">{{ pedido.nomeCliente || 'Cliente indefinido' }}</div>
+        <div class="texto-branco" [matTooltip]="pedido.nomeCliente || 'Cliente indefinido'">
+          {{ pedido.nomeCliente || 'Cliente indefinido' }}
+        </div>
       </div>
       <div class="info-pedido">
         <div class="texto-branco">{{ pedido.horario ? (pedido.horario | date: 'HH:mm') : 'Horário indefinido' }}</div>

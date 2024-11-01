@@ -2,7 +2,9 @@
   <div class="info-pedido-pai" [ngClass]="{ 'pedido-nao-aceito': pedido.status === 'não aceito' }">
     <div class="info-pedido">
       <div class="texto-branco">{{ pedido.tempo }}</div>
-      <div class="texto-branco">{{ pedido.nomeCliente }}</div>
+      <div class="texto-branco" [matTooltip]="pedido.nomeCliente || 'Cliente indefinido'">
+        {{ pedido.nomeCliente || 'Cliente indefinido' }}
+      </div>
     </div>
     <div class="info-pedido">
       <div class="texto-branco">{{ pedido.horario ? (pedido.horario | date: 'HH:mm') : 'Horário indefinido' }}</div>
