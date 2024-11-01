@@ -31,3 +31,7 @@ h1 {
 .fechar {
     justify-content: right;
 }
+
+input {
+    background-color: #F5F5F5;
+}

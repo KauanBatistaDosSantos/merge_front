@@ -66,10 +66,11 @@ export class PedidoService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 
-  atribuirEntregadorAoPedido(id: number, entregadorNome: string): Observable<any> {
+  atribuirEntregadorAoPedido(id: number, entregadorNome: string, tempoEstimado: number): Observable<any> {
     const pedidoAtualizado = {
       entregador: entregadorNome,
-      status: 'pedido enviado para entrega'
+      status: 'pedido enviado para entrega',
+      tempoEstimado: tempoEstimado
     };
     return this.http.patch(`${this.apiUrl}/${id}`, pedidoAtualizado);
   }

@@ -16,7 +16,7 @@
         
     </div>
     
-    <app-previsao-de-entrega *ngIf="mostrarPrevisaoEntrega"></app-previsao-de-entrega>
+    <app-previsao-de-entrega *ngIf="mostrarPrevisaoEntrega" [pedido]="pedido"></app-previsao-de-entrega>
     <!-- <app-dialog-confirme-o-pagamento *ngIf="mostrarDiaPagamento"></app-dialog-confirme-o-pagamento>           -->
     <app-entregador-info-cliente-e-pedido 
         *ngIf="codigoClienteConfirmado" 

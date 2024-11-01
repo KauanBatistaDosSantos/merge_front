@@ -212,7 +212,7 @@
       "observacao": "sem batatinha",
       "numeroPedido": 10,
       "horario": "2024-10-26T22:30:59.298Z",
-      "status": "pedido enviado para entrega",
+      "status": "pedido finalizado",
       "tempo": "0 min",
       "entregador": "Hugo Prado"
     },
@@ -226,9 +226,10 @@
       "observacao": "",
       "numeroPedido": 11,
       "horario": "2024-10-26T22:22:11.927Z",
-      "status": "aguardando entrega",
+      "status": "pedido enviado para entrega",
       "tempo": "0 min",
-      "entregador": ""
+      "entregador": "Hugo Prado",
+      "tempoEstimado": 20
     },
     {
       "id": "12",
@@ -371,6 +372,21 @@
       "status": "pedido finalizado",
       "tempo": "0 min",
       "entregador": "Hugo Prado"
+    },
+    {
+      "id": "22",
+      "nomeCliente": "Vitória",
+      "itens": [],
+      "preco": 115,
+      "endereco": "Rua Rainha Maria Stuart, 139 - Vila Regina",
+      "cpf": "490.883.748-13",
+      "observacao": "",
+      "numeroPedido": 22,
+      "horario": "2024-11-01T17:02:45.738Z",
+      "status": "pedido finalizado",
+      "tempo": "0 min",
+      "entregador": "Hugo Prado",
+      "tempoEstimado": 15
     }
   ],
   "entregadores": [

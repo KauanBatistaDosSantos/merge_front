@@ -7,6 +7,16 @@
 <mat-dialog-content>
     <header>
         <h1>Atribuir pedido nº {{ numeroPedido }} a {{ entregador.nome }}?</h1>
+        <h2>Insira o tempo do trajeto estimado:</h2>
+        <mat-form-field>
+            <input 
+                matInput 
+                maxlength="5" 
+                [(ngModel)]="tempoEstimado" 
+                (ngModelChange)="formatarTempo()" 
+                placeholder="hh:mm">
+        </mat-form-field>
+        <p *ngIf="erroFormato" class="erro">Formato inválido. Use hh:mm (0-23h, 0-59m).</p>
     </header>
 </mat-dialog-content>
 
